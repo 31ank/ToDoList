@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminPage</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <!-- for the beginning admin page will be secured through apache access control so no account managing is required -->
+    <header>
+        <h1>Admin - Page</h1>
+    </header>
+    <div class="content">
+        <form action="newEntry.php" method="POST">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject"><br>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea><br>
+            <label for="due">Due:</label>
+            <input type="date" id="due" name="due"><br>
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>
