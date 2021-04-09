@@ -9,6 +9,7 @@ body {
     display:flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
 }
 
 header {
@@ -27,7 +28,7 @@ header {
 }
 
 .calender {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -58,4 +59,9 @@ footer {
     min-height: 5vh;
     background-color: rgba(255, 255, 255, 0.14);
     padding: 10px;
+}
+
+a {
+    text-decoration: underline;
+    color: white;
 }

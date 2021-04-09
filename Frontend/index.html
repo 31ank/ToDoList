@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <script src="js/datafetcher.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
     <title>ToDo</title>
 </head>
 <body>
@@ -12,7 +14,10 @@
         <h1>ToDo List</h1>
     </header>
     <div class="content">
-        <div class="calender">
+        <div id="loading">
+            Loading...
+        </div>
+        <div class="calender" id="calender">
             <div class="head">
                 <div class="date">01.01.1970</div>
                 <div class="date">02.01.1970</div>
@@ -21,22 +26,11 @@
                 <div class="date">05.01.1970</div>
             </div>
             <div class="body">
-                <div class="entry">
-                    <div class="element">
-                        Wissenschaftliche Arbeiten
-                    </div>
-                    <div class="element">
-                        AlgoDat
-                    </div>
-                </div>
                 <div class="entry"></div>
                 <div class="entry"></div>
                 <div class="entry"></div>
-                <div class="entry">
-                    <div class="element">
-                        Angewante Mathematik
-                    </div>
-                </div>
+                <div class="entry"></div>
+                <div class="entry"></div>
             </div>
         </div>
     </div>
