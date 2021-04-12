@@ -1,0 +1,25 @@
+.content form {
+    background-color: rgba(255, 255, 255, 0.11);
+    padding: 10px;
+}
+
+input[type="text"], input[type="date"], textarea {
+    width: 20vw;
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+    .content form {
+        width: 90vw;
+    }
+    input[type="text"], input[type="date"], textarea {
+        width: 85vw;
+        font-size: 14px;
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}

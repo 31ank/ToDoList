@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdminPage</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/admin.css">
 </head>
 <body>
     <!-- for the beginning admin page will be secured through apache access control so no account managing is required -->
@@ -14,19 +15,19 @@
     </header>
     <div class="content">
         <form action="newEntry.php" method="POST">
-            <label for="subject">Subject:</label>
+            <label for="subject">Subject:</label><br>
             <input type="text" id="subject" name="subject"><br>
-            <label for="description">Description:</label>
-            <textarea id="description" name="description"></textarea><br>
-            <label for="due">Due:</label>
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="4"></textarea><br>
+            <label for="due">Due:</label><br>
             <input type="date" id="due" name="due"><br>
-            <label for="url">URL:</label>
+            <label for="url">URL:</label><br>
             <input type="text" id="url" name="url"><br>
             <button type="submit">Submit</button>
         </form>
     </div>
     <footer>
-
+        &copy;2021 31ank
     </footer>
 </body>
 </html>

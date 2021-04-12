@@ -54,10 +54,20 @@ header {
     padding: 5px;
 }
 
+.right {
+    position: absolute;
+    right: 10px;
+}
+
 footer {
     min-height: 5vh;
     background-color: rgba(255, 255, 255, 0.14);
     padding: 10px;
+    color: rgba(255, 255, 255, 0.27);
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    font-size: 12px;
 }
 
 a {
@@ -68,12 +78,6 @@ a {
 .subject {
     font-weight: bold;
     padding-top: 10px;
-}
-
-/* admin page specific */
-.content form {
-    background-color: rgba(255, 255, 255, 0.11);
-    padding: 10px;
 }
 
 @media only screen and (max-width: 700px) {
