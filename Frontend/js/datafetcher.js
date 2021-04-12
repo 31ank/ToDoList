@@ -27,8 +27,7 @@ calenderEnd = calenderEnd.addDays(5);
 
 // Function to fetch all data
 function getData(){
-    // fetch('https://todo.blankbit.net/Backend/api.php')
-    fetch('http://192.168.0.3/api.php')
+    fetch('https://todo.blankbit.net/Backend/api.php')
     .then(function(response){
         if(!response.ok){
             throw new Error('Response error');
