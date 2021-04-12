@@ -68,7 +68,7 @@ function fillCalender(data){
             if(submissionDate.getTime() == date.getTime()){
                 let newElement = document.createElement('div');
                 newElement.className = 'element';
-                let innerHTML = element['description'] + '<br><a href="' + element['url'] + '" target="_blank">Link</a>';
+                let innerHTML = element['subject'] + '<br>' + element['description'] + '<br><a href="' + element['url'] + '" target="_blank">Link</a>';
                 newElement.innerHTML = innerHTML;
                 entries[counter].append(newElement);
             }
