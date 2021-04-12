@@ -27,7 +27,8 @@ calenderEnd = calenderEnd.addDays(5);
 
 // Function to fetch all data
 function getData(){
-    fetch('https://todo.blankbit.net/Backend/api.php')
+    // fetch('https://todo.blankbit.net/Backend/api.php')
+    fetch('http://192.168.0.3/api.php')
     .then(function(response){
         if(!response.ok){
             throw new Error('Response error');
@@ -49,7 +50,7 @@ function getData(){
 
 // Create calender headers
 function setupCalender(){
-    let dates = document.getElementsByClassName('date');
+    let dates = document.getElementsByClassName('header');
     let counter = 0;
     for (let date = day; date < calenderEnd; date = date.addDays(1)) {
         dates[counter].innerHTML = weekdays[date.getDay()] + " " + zeroPad(date.getDate(), 2) + "." + (date.getMonth() + 1);
@@ -59,20 +60,32 @@ function setupCalender(){
 
 // Fill calender with data
 function fillCalender(data){
-    let entries = document.getElementsByClassName("entry");
+    let dates = document.getElementsByClassName('date');
+
     let counter = 0;
+    let entries = 0;
     for(let date = day; date < calenderEnd; date = date.addDays(1)){
         data.forEach(element => {
             let submissionDate = new Date(element['submissionDate']);
             submissionDate.setHours(0, 0, 0, 0);
             if(submissionDate.getTime() == date.getTime()){
+                entries++;
                 let newElement = document.createElement('div');
                 newElement.className = 'element';
                 let innerHTML = '<div class="subject">' + element['subject'] + '</div>' + element['description'] + '<br><a href="' + element['url'] + '" target="_blank">Link</a>';
                 newElement.innerHTML = innerHTML;
-                entries[counter].append(newElement);
+                dates[counter].append(newElement);
             }
+            
         });
+        // If no entries in one day -> display none
+        if(entries == 0){
+            let noToDo = document.createElement('div');
+            noToDo.className = 'element';
+            noToDo.innerHTML = '<i>None</i>'
+            dates[counter].append(noToDo);
+        }
+        entries = 0;
         counter++;
     }
 }
